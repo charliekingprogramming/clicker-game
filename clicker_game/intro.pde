@@ -1,9 +1,11 @@
 void intro() {
-  background(255);
+    background(240, 202, 75);
   
   fill(0);
-  textSize(200);
-  text("HELLO", 400, 400);
+  textSize(100);
+  fill(37, 15, 167);
+  text("Click the DOT", 400, 200);
+  
   theme.play();
 }
 

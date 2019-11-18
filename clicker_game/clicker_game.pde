@@ -27,13 +27,12 @@ int score, lives;
 void setup() {
   x = 400;
   y = 400;
-  vx = random(-3, 3);
-  vy = random(-3, 3);
+  vx = random(-10, 10);
+  vy = random(-10, 10);
   
   
   score = 0;
   lives = 3;
-  
   size(800, 800);
   mode = INTRO;
   textAlign(CENTER, CENTER);

@@ -1,5 +1,21 @@
 void game() {
-  background(0, 255, 0);
+  background(17, 165, 216);
+  
+   //target
+ strokeWeight(1);
+fill(240, 229, 10);
+ ellipse(x, y, 100, 100);
+  
+    stroke(255);
+  fill(255);
+  ellipse(250, 300, 110, 110);//clouds
+  ellipse(300, 250, 110, 110);
+  ellipse(350, 300, 110, 110);
+  
+  ellipse(550, 350, 110, 110);//clouds2
+  ellipse(600, 300, 110, 110);
+  ellipse(650, 350, 110, 110);
+  
   
   fill(0);
   textSize(40);
@@ -7,17 +23,14 @@ void game() {
   text("Lives: " + lives, 100, 300);
   
 
- //target
- strokeWeight(4);
-fill(255);
- ellipse(x, y, 100, 100);
+
  //movement
  x = x + vx;
  y = y + vy;
  
  //bounce top or bottom
- if(y < 0 || y > 750) vy = vy * -1;
- if (x < 0 || x > 750) vx = vx * -1;
+ if(y < 50 || y > 750) vy = vy * -1;
+ if (x < 50 || x > 750) vx = vx * -1;
 }
 
 void gameClicks() {
@@ -31,6 +44,9 @@ void gameClicks() {
       mode = GAMEOVER;
       bump.rewind();
       bump.play();
+      lives = 3;
+      score = 0;
+      
   }
   }
 }
